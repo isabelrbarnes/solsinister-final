@@ -1,0 +1,128 @@
+@import "tailwindcss";
+@import "@fontsource/playfair-display/400.css";
+@import "@fontsource/playfair-display/500.css";
+@import "@fontsource/playfair-display/600.css";
+@import "@fontsource/playfair-display/700.css";
+@import "@fontsource/inter/400.css";
+@import "@fontsource/inter/500.css";
+@import "@fontsource/inter/600.css";
+
+:root {
+  /* Honey Birdette Dark Luxury Theme */
+  --background: #000000;
+  --foreground: #ffffff;
+  --primary: #ffffff;
+  --secondary: #d4af37;
+  --accent: #1a1a1a;
+  --muted: #2a2a2a;
+  --border: #333333;
+  --luxury-rose: #d4a574;
+  --luxury-nude: #f4e6d7;
+  --luxury-red: #bb0a21;
+}
+
+@theme inline {
+  /* Background colors */
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-primary: var(--primary);
+  --color-secondary: var(--secondary);
+  --color-accent: var(--accent);
+  --color-muted: var(--muted);
+  --color-border: var(--border);
+  
+  /* Honey Birdette dark luxury brand colors */
+  --color-luxury-white: #ffffff;
+  --color-luxury-black: #000000;
+  --color-luxury-gold: #d4af37;
+  --color-luxury-rose: #d4a574;
+  --color-luxury-nude: #f4e6d7;
+  --color-luxury-accent: #1a1a1a;
+  --color-luxury-muted: #2a2a2a;
+  
+  /* Elegant gradients */
+  --color-gradient-luxury: linear-gradient(135deg, #d4a574 0%, #d4af37 100%);
+  --color-gradient-nude: linear-gradient(135deg, #f4e6d7 0%, #d4a574 100%);
+  
+  /* Typography */
+  --font-heading: "Playfair Display", serif;
+  --font-body: "Inter", sans-serif;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-body);
+  line-height: 1.6;
+}
+
+/* Honey Birdette Dark Theme Button Styles */
+.btn-luxury {
+  @apply bg-luxury-white text-luxury-black px-8 py-3 font-medium tracking-wide uppercase text-sm transition-all duration-300 hover:bg-luxury-rose hover:text-luxury-white;
+  border: 1px solid transparent;
+}
+
+.btn-luxury-outlined {
+  @apply bg-transparent text-luxury-white px-8 py-3 font-medium tracking-wide uppercase text-sm transition-all duration-300 hover:bg-luxury-white hover:text-luxury-black;
+  border: 1px solid #ffffff;
+}
+
+.btn-luxury-gold {
+  @apply bg-luxury-gold text-luxury-black px-8 py-3 font-medium tracking-wide uppercase text-sm transition-all duration-300 hover:opacity-90;
+  border: 1px solid transparent;
+}
+
+/* Elegant shadows */
+.luxury-shadow {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.luxury-hover {
+  transition: all 0.3s ease;
+}
+
+.luxury-hover:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Elegant scrollbar styling */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--luxury-accent);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--luxury-rose);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--luxury-gold);
+}
+
+/* Honey Birdette inspired typography */
+.luxury-heading {
+  font-family: var(--font-heading);
+  font-weight: 400;
+  letter-spacing: 0.5px;
+  line-height: 1.2;
+}
+
+.luxury-subheading {
+  font-family: var(--font-body);
+  font-weight: 300;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-size: 0.875rem;
+}
+
+.luxury-body {
+  font-family: var(--font-body);
+  font-weight: 300;
+  line-height: 1.6;
+  letter-spacing: 0.25px;
+}

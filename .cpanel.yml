@@ -1,0 +1,8 @@
+deployment:
+  tasks:
+    - export REPOPATH=/home/solsinis/repositories/solsinister-final4
+    - export DEPLOYPATH=/home/solsinis/public_html
+    - /usr/bin/rsync -a --delete \
+        --exclude=".git/" \
+        --exclude=".cpanel.yml" \
+        "$REPOPATH/out/" "$DEPLOYPATH"/
